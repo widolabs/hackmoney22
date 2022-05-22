@@ -1,0 +1,31 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "prep-local:eth": "npx hardhat run scripts/prep-local-eth.js --network localhost",
+    "prep-local:fantom": "npx hardhat run scripts/prep-local-fantom.js --network localhost",
+    "prep-local:avax": "npx hardhat run scripts/prep-local-avax.js --network localhost"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/hardhat-upgrades": "^1.17.0",
+    "@tenderly/hardhat-tenderly": "^1.0.13",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.4",
+    "hardhat": "^2.9.3",
+    "hardhat-contract-sizer": "^2.5.1",
+    "hardhat-etherscan-abi": "^0.2.0",
+    "hardhat-preprocessor": "^0.1.4",
+    "yarn-upgrade-all": "^0.7.1"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.0",
+    "@layerzerolabs/contracts": "git+https://github.com/LayerZero-Labs/LayerZero.git",
+    "@openzeppelin/contracts": "^4.5.2",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "lite-server": "^2.6.1"
+  }
+}
