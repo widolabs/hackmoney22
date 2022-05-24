@@ -1,0 +1,11 @@
+env: standard
+runtime: nodejs14
+service: wido-fe
+handlers:
+  - url: /(.*\.(json|js|css|png|svg|woff|woff2))$
+    static_files: dist/\1
+    upload: dist/.*\.(json|js|css|png|svg|woff|woff2)$
+  - url: .*
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always

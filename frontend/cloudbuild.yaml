@@ -1,0 +1,18 @@
+steps:
+  - name: node
+    entrypoint: yarn
+    args: ["install"]
+  - name: node
+    entrypoint: yarn
+    args: ["run", "build"]
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args: ["-c", "gcloud app deploy --quiet"]
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      ["-c", 'gcloud compute url-maps invalidate-cdn-cache wido --path "/*"']
+  - name: node
+    entrypoint: "yarn"
+    args: ["export-extra-vaults"]
+timeout: "1600s"
