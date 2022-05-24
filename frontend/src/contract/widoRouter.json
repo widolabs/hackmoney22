@@ -1,0 +1,222 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DOMAIN_SEPARATOR",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_swapAddress", "type": "address" }
+    ],
+    "name": "addApprovedSwapAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "approvedSwapAddresses",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "user", "type": "address" },
+          { "internalType": "address", "name": "fromToken", "type": "address" },
+          { "internalType": "address", "name": "toToken", "type": "address" },
+          {
+            "internalType": "uint256",
+            "name": "fromTokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minToTokenAmount",
+            "type": "uint256"
+          },
+          { "internalType": "uint32", "name": "nonce", "type": "uint32" },
+          { "internalType": "uint32", "name": "expiration", "type": "uint32" }
+        ],
+        "internalType": "struct WidoRouter.Order",
+        "name": "order",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          { "internalType": "address", "name": "fromToken", "type": "address" },
+          { "internalType": "address", "name": "toToken", "type": "address" },
+          {
+            "internalType": "address",
+            "name": "swapAddress",
+            "type": "address"
+          },
+          { "internalType": "bytes", "name": "swapData", "type": "bytes" }
+        ],
+        "internalType": "struct WidoRouter.SwapRoute[]",
+        "name": "swapRoute",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "executeOrder",
+    "outputs": [
+      { "internalType": "uint256", "name": "toTokenBalance", "type": "uint256" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "user", "type": "address" },
+          { "internalType": "address", "name": "fromToken", "type": "address" },
+          { "internalType": "address", "name": "toToken", "type": "address" },
+          {
+            "internalType": "uint256",
+            "name": "fromTokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minToTokenAmount",
+            "type": "uint256"
+          },
+          { "internalType": "uint32", "name": "nonce", "type": "uint32" },
+          { "internalType": "uint32", "name": "expiration", "type": "uint32" }
+        ],
+        "internalType": "struct WidoRouter.Order",
+        "name": "order",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          { "internalType": "address", "name": "fromToken", "type": "address" },
+          { "internalType": "address", "name": "toToken", "type": "address" },
+          {
+            "internalType": "address",
+            "name": "swapAddress",
+            "type": "address"
+          },
+          { "internalType": "bytes", "name": "swapData", "type": "bytes" }
+        ],
+        "internalType": "struct WidoRouter.SwapRoute[]",
+        "name": "swapRoute",
+        "type": "tuple[]"
+      },
+      { "internalType": "uint8", "name": "v", "type": "uint8" },
+      { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+    ],
+    "name": "executeOrderWithSignature",
+    "outputs": [
+      { "internalType": "uint256", "name": "toTokenBalance", "type": "uint256" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_chainId", "type": "uint256" }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "nonces",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_swapAddress", "type": "address" }
+    ],
+    "name": "removeApprovedSwapAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "newOwner", "type": "address" }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "user", "type": "address" },
+          { "internalType": "address", "name": "fromToken", "type": "address" },
+          { "internalType": "address", "name": "toToken", "type": "address" },
+          {
+            "internalType": "uint256",
+            "name": "fromTokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minToTokenAmount",
+            "type": "uint256"
+          },
+          { "internalType": "uint32", "name": "nonce", "type": "uint32" },
+          { "internalType": "uint32", "name": "expiration", "type": "uint32" }
+        ],
+        "internalType": "struct WidoRouter.Order",
+        "name": "order",
+        "type": "tuple"
+      },
+      { "internalType": "uint8", "name": "v", "type": "uint8" },
+      { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+    ],
+    "name": "verifyOrderRequest",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

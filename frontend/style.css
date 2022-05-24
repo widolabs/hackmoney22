@@ -1,0 +1,119 @@
+html,
+body,
+#wido-app {
+  height: 100%;
+}
+
+.bn-onboard-modal {
+  z-index: 99999;
+}
+
+body.wallet-auto-connect {
+  overflow: visible !important;
+}
+
+body.wallet-auto-connect .bn-onboard-modal {
+  visibility: hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Scrollbar start */
+
+body,
+* {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+  /* border-radius: 4px; */
+  width: 10px;
+}
+
+::-webkit-scrollbar {
+  background-color: #e9e9e9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+
+.dark-mode::-webkit-scrollbar,
+.dark-mode ::-webkit-scrollbar {
+  background-color: #424242;
+}
+
+.dark-mode::-webkit-scrollbar-thumb,
+.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #686868;
+}
+
+/* Scrollbar end */
+
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+*:focus {
+  outline-color: #25be90;
+  /* outline-offset: 0px; */
+}
+
+/**
+ * Following is a partial of: node_modules/inter-ui/inter.css
+ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("npm:inter-ui/Inter (web)/Inter-Light.woff2?v=3.19") format("woff2"), url("npm:inter-ui/Inter (web)/Inter-Light.woff?v=3.19") format("woff");
+}
+
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("npm:inter-ui/Inter (web)/Inter-Regular.woff2?v=3.19") format("woff2"), url("npm:inter-ui/Inter (web)/Inter-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("npm:inter-ui/Inter (web)/Inter-Medium.woff2?v=3.19") format("woff2"), url("npm:inter-ui/Inter (web)/Inter-Medium.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("npm:inter-ui/Inter (web)/Inter-Bold.woff2?v=3.19") format("woff2"), url("npm:inter-ui/Inter (web)/Inter-Bold.woff?v=3.19") format("woff");
+}
